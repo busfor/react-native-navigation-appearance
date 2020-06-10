@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "noImplicitAny": true,
+    "lib": ["dom", "esnext"],
+    "module": "commonjs",
+    "target": "es5",
+    "jsx": "react",
+    "declaration": true,
+    "esModuleInterop": true,
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "scripts", "example"]
+}

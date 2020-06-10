@@ -1,0 +1,61 @@
+{
+  "name": "@busfor/react-native-navigation-appearance",
+  "title": "React Native Navigation Appearance",
+  "version": "1.0.0",
+  "description": "Appearance Module built on top of wix/react-native-navigation",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "build": "rm -rf ./dist && tsc",
+    "version": "auto-changelog -p && git add CHANGELOG.md",
+    "lint": "eslint --ext .tsx,.ts ./src",
+    "example:install": "cd ./example && yarn",
+    "example:test": "cd ./example && yarn test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/busfor/react-native-navigation-appearance.git",
+    "baseUrl": "https://github.com/busfor/react-native-navigation-appearance"
+  },
+  "keywords": [
+    "react-native",
+    "touchable",
+    "nativefeedback",
+    "button"
+  ],
+  "author": {
+    "name": "Andrey Sorokin",
+    "email": "sorokin0andrey@gmail.com"
+  },
+  "license": "MIT",
+  "licenseFilename": "LICENSE",
+  "readmeFilename": "README.md",
+  "peerDependencies": {
+    "@react-native-community/async-storage": ">=1.8.1",
+    "react": "^16.8.1",
+    "react-native": ">=0.62.0 <1.0.x",
+    "react-native-navigation": ">=6.4.0"
+  },
+  "devDependencies": {
+    "@react-native-community/async-storage": "^1.11.0",
+    "@react-native-community/eslint-config": "^0.0.7",
+    "@types/events": "^3.0.0",
+    "@types/react": "^16.9.19",
+    "@types/react-native": "^0.62.12",
+    "@typescript-eslint/eslint-plugin": "^2.23.0",
+    "@typescript-eslint/parser": "^2.23.0",
+    "auto-changelog": "^1.16.2",
+    "eslint": "^6.8.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "prettier": "^1.19.1",
+    "react": "^16.12.0",
+    "react-native": "^0.62.2",
+    "react-native-navigation": "^6.7.1",
+    "typescript": "^3.8.2"
+  },
+  "dependencies": {
+    "deepmerge": "^4.2.2",
+    "events": "^3.1.0"
+  }
+}

@@ -1,0 +1,14 @@
+example
+scripts
+src
+.prettierrc
+tsconfig.json
+.vscode
+.idea
+.gradle
+build
+local.properties
+android.iml
+.eslintrc.js
+.eslintignore
+.github

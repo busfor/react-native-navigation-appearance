@@ -1,0 +1,519 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "paddingHorizontal": 16,
+          "width": "100%",
+        },
+        Object {
+          "marginBottom": 40,
+        },
+      ]
+    }
+  >
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#F9253F",
+          "borderRadius": 16,
+          "elevation": 3,
+          "height": 56,
+          "opacity": 1,
+          "padding": 0,
+          "paddingBottom": 0,
+          "paddingHorizontal": 0,
+          "paddingLeft": 0,
+          "paddingRight": 0,
+          "paddingTop": 0,
+          "paddingVertical": 0,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#F9253F",
+              "borderRadius": 16,
+              "elevation": 3,
+              "height": 56,
+            },
+            Object {
+              "borderWidth": 0,
+              "bottom": 0,
+              "left": 0,
+              "margin": 0,
+              "marginBottom": 0,
+              "marginHorizontal": 0,
+              "marginLeft": 0,
+              "marginRight": 0,
+              "marginTop": 0,
+              "marginVertical": 0,
+              "overflow": "hidden",
+              "position": "relative",
+              "right": 0,
+              "shadowOpacity": 0,
+              "top": 0,
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "justifyContent": "center",
+              "paddingHorizontal": 24,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#fff",
+                "fontSize": 16,
+              }
+            }
+          >
+            Full width button
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "marginBottom": 40,
+      }
+    }
+  >
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#F9253F",
+          "borderRadius": 16,
+          "elevation": 3,
+          "height": 56,
+          "opacity": 1,
+          "padding": 0,
+          "paddingBottom": 0,
+          "paddingHorizontal": 0,
+          "paddingLeft": 0,
+          "paddingRight": 0,
+          "paddingTop": 0,
+          "paddingVertical": 0,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#F9253F",
+              "borderRadius": 16,
+              "elevation": 3,
+              "height": 56,
+            },
+            Object {
+              "borderWidth": 0,
+              "bottom": 0,
+              "left": 0,
+              "margin": 0,
+              "marginBottom": 0,
+              "marginHorizontal": 0,
+              "marginLeft": 0,
+              "marginRight": 0,
+              "marginTop": 0,
+              "marginVertical": 0,
+              "overflow": "hidden",
+              "position": "relative",
+              "right": 0,
+              "shadowOpacity": 0,
+              "top": 0,
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "justifyContent": "center",
+              "paddingHorizontal": 24,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#fff",
+                "fontSize": 16,
+              }
+            }
+          >
+            Button
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "marginBottom": 40,
+      }
+    }
+  >
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#F9253F",
+            "borderRadius": 16,
+            "elevation": 3,
+            "height": 56,
+          },
+          Object {
+            "padding": 0,
+            "paddingBottom": 0,
+            "paddingHorizontal": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 0,
+            "paddingVertical": 0,
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#F9253F",
+              "borderRadius": 16,
+              "elevation": 3,
+              "height": 56,
+            },
+            Object {
+              "borderWidth": 0,
+              "bottom": 0,
+              "left": 0,
+              "margin": 0,
+              "marginBottom": 0,
+              "marginHorizontal": 0,
+              "marginLeft": 0,
+              "marginRight": 0,
+              "marginTop": 0,
+              "marginVertical": 0,
+              "overflow": "hidden",
+              "position": "relative",
+              "right": 0,
+              "shadowOpacity": 0,
+              "top": 0,
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "justifyContent": "center",
+              "paddingHorizontal": 24,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#fff",
+                "fontSize": 16,
+              }
+            }
+          >
+            Button with highlight
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "marginBottom": 40,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#F9253F",
+            "borderRadius": 16,
+            "elevation": 3,
+            "height": 56,
+          },
+          Object {
+            "padding": 0,
+            "paddingBottom": 0,
+            "paddingHorizontal": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 0,
+            "paddingVertical": 0,
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#F9253F",
+              "borderRadius": 16,
+              "elevation": 3,
+              "height": 56,
+            },
+            Object {
+              "borderWidth": 0,
+              "bottom": 0,
+              "left": 0,
+              "margin": 0,
+              "marginBottom": 0,
+              "marginHorizontal": 0,
+              "marginLeft": 0,
+              "marginRight": 0,
+              "marginTop": 0,
+              "marginVertical": 0,
+              "overflow": "hidden",
+              "position": "relative",
+              "right": 0,
+              "shadowOpacity": 0,
+              "top": 0,
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "justifyContent": "center",
+              "paddingHorizontal": 24,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#fff",
+                "fontSize": 16,
+              }
+            }
+          >
+            Button without feedback
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "marginBottom": 40,
+      }
+    }
+  >
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "margin": -16,
+          "opacity": 1,
+          "padding": 0,
+          "paddingBottom": 0,
+          "paddingHorizontal": 0,
+          "paddingLeft": 0,
+          "paddingRight": 0,
+          "paddingTop": 0,
+          "paddingVertical": 0,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "margin": -16,
+              "padding": 16,
+            },
+            Object {
+              "borderWidth": 0,
+              "bottom": 0,
+              "left": 0,
+              "margin": 0,
+              "marginBottom": 0,
+              "marginHorizontal": 0,
+              "marginLeft": 0,
+              "marginRight": 0,
+              "marginTop": 0,
+              "marginVertical": 0,
+              "overflow": "hidden",
+              "position": "relative",
+              "right": 0,
+              "shadowOpacity": 0,
+              "top": 0,
+            },
+            undefined,
+          ]
+        }
+      >
+        <Image
+          source={1}
+          style={
+            Object {
+              "tintColor": "#F9253F",
+            }
+          }
+        />
+      </View>
+    </View>
+  </View>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "borderColor": "#F9253F",
+        "borderRadius": 16,
+        "borderWidth": 1,
+        "height": 56,
+        "justifyContent": "center",
+        "opacity": 1,
+        "padding": 0,
+        "paddingBottom": 0,
+        "paddingHorizontal": 0,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingVertical": 0,
+        "width": 200,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "borderColor": "#F9253F",
+            "borderRadius": 16,
+            "borderWidth": 1,
+            "height": 54,
+            "justifyContent": "center",
+            "width": 200,
+          },
+          Object {
+            "borderWidth": 0,
+            "bottom": 0,
+            "left": 0,
+            "margin": 0,
+            "marginBottom": 0,
+            "marginHorizontal": 0,
+            "marginLeft": 0,
+            "marginRight": 0,
+            "marginTop": 0,
+            "marginVertical": 0,
+            "overflow": "hidden",
+            "position": "relative",
+            "right": 0,
+            "shadowOpacity": 0,
+            "top": 0,
+          },
+          undefined,
+        ]
+      }
+    >
+      <Text>
+        Press here
+      </Text>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;
