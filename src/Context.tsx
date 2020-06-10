@@ -35,7 +35,6 @@ export const getCurrentAppearance = (): Appearance => {
   if (!useSystemAppearance) {
     return manualAppearance
   }
-  console.log(NativeModule.DEVICE_BRAND)
   return RNAppearance.getColorScheme() as Appearance
 }
 
