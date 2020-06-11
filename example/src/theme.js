@@ -1,4 +1,6 @@
-export const theme = {
+import { createTheme } from '@busfor/react-native-navigation-appearance'
+
+export const theme = createTheme({
   dark: {
     backgroundColor: '#121212',
     textColor: '#fff',
@@ -9,4 +11,4 @@ export const theme = {
     textColor: '#121212',
     primaryColor: 'red',
   },
-}
+})

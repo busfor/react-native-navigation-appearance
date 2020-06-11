@@ -48,3 +48,5 @@ export const initialOptions = <T>(optionsCreator: ThemedOptions<T>) => (passProp
   }
   return options
 }
+
+export const createTheme = <T = {}>(appearances: { [s in Appearance]: T }) => appearances

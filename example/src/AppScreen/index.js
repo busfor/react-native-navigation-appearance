@@ -7,11 +7,11 @@ import {
   initialOptions,
   useThemedOptions,
   useThemeControls,
+  Appearance,
 } from '@busfor/react-native-navigation-appearance'
 
 import stylesCreator from './styles'
 import options from './options'
-import { Appearance } from '@busfor/react-native-navigation-appearance/dist/types'
 
 const AppScreen = memo(({ componentId }) => {
   useThemedOptions({}, options, componentId)
