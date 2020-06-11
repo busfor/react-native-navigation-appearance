@@ -19,9 +19,9 @@
   },
   "keywords": [
     "react-native",
-    "touchable",
-    "nativefeedback",
-    "button"
+    "react-native-navigation",
+    "appearance",
+    "dark-mode"
   ],
   "author": {
     "name": "Andrey Sorokin",
