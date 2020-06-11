@@ -1,7 +1,7 @@
 {
   "name": "@busfor/react-native-navigation-appearance",
   "title": "React Native Navigation Appearance",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Appearance Module built on top of wix/react-native-navigation",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
