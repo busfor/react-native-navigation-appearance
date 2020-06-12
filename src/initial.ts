@@ -29,6 +29,10 @@ export const createDefaultOptions = (defaults: (props: StylesProps) => Options):
 ): Options => {
   const defaultOptions = defaults(props)
 
+  if (options?.topBar?.backButton === undefined) {
+    defaultOptions.topBar.backButton = undefined
+  }
+
   if (options?.topBar?.leftButtons?.length === 0) {
     defaultOptions.topBar.leftButtons = []
   }
