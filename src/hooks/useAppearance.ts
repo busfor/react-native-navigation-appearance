@@ -5,7 +5,7 @@ import { ThemeContext } from '../Context'
 
 import useDeviceAppearance from './useDeviceAppearance'
 
-const useThemeAppearance = (): Appearance => {
+const useAppearance = (): Appearance => {
   const deviceAppearance = useDeviceAppearance()
   const {
     state: { useSystemAppearance, manualAppearance },
@@ -20,4 +20,4 @@ const useThemeAppearance = (): Appearance => {
   return appearance
 }
 
-export default useThemeAppearance
+export default useAppearance

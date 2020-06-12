@@ -1,4 +1,4 @@
-export { default as useThemeAppearance } from './useThemeAppearance'
+export { default as useAppearance } from './useAppearance'
 export { default as useThemedValue } from './useThemedValue'
 export { default as useStyles } from './useStyles'
 export { default as useThemedOptions } from './useThemedOptions'

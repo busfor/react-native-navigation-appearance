@@ -279,15 +279,15 @@ const App = () => {
 
 ## Other hooks
 
-### useThemeAppearance
+### useAppearance
 
-You can get current appearance using `useThemeAppearance` hook:
+You can get current appearance using `useAppearance` hook:
 
 ```javascript
-import { useThemeAppearance, Appearance } from '@busfor/react-native-navigation-appearance'
+import { useAppearance, Appearance } from '@busfor/react-native-navigation-appearance'
 
 const App = () => {
-  const appearance = useThemeAppearance()
+  const appearance = useAppearance()
 
   return <Text>Current appearance: {appearance}</Text>
 }

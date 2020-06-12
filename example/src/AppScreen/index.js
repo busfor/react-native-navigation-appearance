@@ -1,7 +1,7 @@
 import React, { memo, useContext } from 'react'
 import { Text, SafeAreaView, View, Button } from 'react-native'
 import {
-  useThemeAppearance,
+  useAppearance,
   ThemeContext,
   useStyles,
   initialOptions,
@@ -18,7 +18,7 @@ const AppScreen = memo(({ componentId }) => {
 
   const styles = useStyles(stylesCreator)
   const themeCtx = useContext(ThemeContext)
-  const appearance = useThemeAppearance()
+  const appearance = useAppearance()
   const { setManualAppearance, setUseSystemAppearance } = useThemeControls()
 
   return (

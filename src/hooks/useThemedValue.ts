@@ -1,13 +1,13 @@
 import { Appearance } from '../types'
 
-import useThemeAppearance from './useThemeAppearance'
+import useAppearance from './useAppearance'
 
 /**
  * Get value for current appearance
  * @param values - Values for each appearance
  */
 const useThemedValue = <T>(values: { [s in Appearance]: T }): T => {
-  const appearance = useThemeAppearance()
+  const appearance = useAppearance()
   return values[appearance]
 }
 

@@ -5,7 +5,7 @@ import { Platform } from 'react-native'
 import { ThemedOptions } from '../types'
 import { darkAppearanceXiaomiException } from '../utils'
 
-import useThemeAppearance from './useThemeAppearance'
+import useAppearance from './useAppearance'
 
 /**
  * Updates options when changing appearance
@@ -15,7 +15,7 @@ import useThemeAppearance from './useThemeAppearance'
  * @returns options
  */
 const useThemedOptions = <T>(passProps: T, optionsCreator: ThemedOptions<T>, componentId: string): void => {
-  const appearance = useThemeAppearance()
+  const appearance = useAppearance()
   const firstUpdate = useRef(true)
 
   useEffect(() => {

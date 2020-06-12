@@ -1,7 +1,7 @@
 import React, { memo } from 'react'
 import { Text, SafeAreaView, View, Button, NativeModules } from 'react-native'
 import {
-  useThemeAppearance,
+  useAppearance,
   useStyles,
   initialOptions,
   useThemedOptions,
@@ -17,7 +17,7 @@ import { Alert } from 'react-native'
 const AnotherScreen = memo(({ componentId }) => {
   useThemedOptions({}, options, componentId)
 
-  const appearance = useThemeAppearance()
+  const appearance = useAppearance()
   const styles = useStyles(stylesCreator)
 
   return (
