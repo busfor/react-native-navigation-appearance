@@ -25,7 +25,13 @@ Make sure that your are using supported versions of react-native-navigation and 
 
 ### Android
 
-#### 1 Install module
+#### 1 Install dependencies
+
+Make sure that you have installed `@react-native-community/async-storage` dependency or install it using:
+
+`$ yarn add @react-native-community/async-storage`
+
+Install this module using:
 
 `$ yarn add @busfor/react-native-navigation-appearance`
 
