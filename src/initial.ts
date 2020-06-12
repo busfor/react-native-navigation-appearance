@@ -29,6 +29,10 @@ export const createDefaultOptions = (defaults: (props: StylesProps) => Options):
 ): Options => {
   const defaultOptions = defaults(props)
 
+  if (darkAppearanceXiaomiException) {
+    defaultOptions.statusBar = undefined
+  }
+
   if (options?.topBar?.backButton === undefined) {
     defaultOptions.topBar.backButton = undefined
   }
