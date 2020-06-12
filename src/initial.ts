@@ -29,6 +29,22 @@ export const createDefaultOptions = (defaults: (props: StylesProps) => Options):
 ): Options => {
   const defaultOptions = defaults(props)
 
+  if (options?.topBar?.leftButtons?.length === 0) {
+    defaultOptions.topBar.leftButtons = []
+  }
+
+  if (options?.topBar?.leftButtons?.length) {
+    defaultOptions.topBar.leftButtons = options.topBar.leftButtons
+  }
+
+  if (options?.topBar?.rightButtons?.length === 0) {
+    defaultOptions.topBar.rightButtons = []
+  }
+
+  if (options?.topBar?.rightButtons?.length) {
+    defaultOptions.topBar.rightButtons = options.topBar.rightButtons
+  }
+
   if (options) {
     return merge(defaultOptions, options)
   }
