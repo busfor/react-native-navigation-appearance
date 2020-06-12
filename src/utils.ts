@@ -21,3 +21,11 @@ export const isAutomaticDarkAppearanceAvailable = Platform.select({
 })
 
 export const initialAppearance = RNAppearance.getColorScheme() as Appearance
+
+/**
+ * Choose styles or options depending on the appearance (works like a Platform.select)
+ * @param appearance - appearance from props (see createStyles, createOptions, initialOptions)
+ * @param values - Values for each appearance
+ */
+export const appearanceSelect = <T>(appearance: Appearance, values: { [s in Appearance]?: T }): T | undefined =>
+  values[appearance] || undefined

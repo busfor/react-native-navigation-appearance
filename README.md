@@ -309,3 +309,27 @@ const App = () => {
   return <Image source={logoSource} />
 }
 ```
+
+## Utils
+
+### appearanceSelect
+
+With this function, you can select specific unique styles and options per appearance (like `Platform.select`)
+
+```javascript
+import { createOptions, appearanceSelect } from '@busfor/react-native-navigation-appearance'
+import { defaultOptions } from '../defaultOptions'
+
+export default createOptions((props) =>
+  defaultOptions(props, {
+    topBar: {
+      title: {
+        text: appearanceSelect(props.appearance, {
+          light: 'This is text for the light appearance',
+          dark: 'This is text for the dark appearance',
+        }),
+      },
+    },
+  })
+)
+```
