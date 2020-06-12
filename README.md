@@ -13,6 +13,14 @@ React Native universal Touchable component.
 
 ---
 
+## Dependecies
+
+Make sure that your are using supported versions of react-native-navigation and react-native:
+
+| 1.x                                                    |
+| ------------------------------------------------------ |
+| react-native-navigation >= 6.4.0; react-native: >=0.62 |
+
 ## Installation
 
 ### Android
@@ -225,3 +233,73 @@ export default AppScreen
 ```
 
 Also you can open the example project to see how it works in the real case.
+
+## Manual appearance
+
+You can set appearance manually using `useThemeControls` hook:
+
+```javascript
+import { useThemeControls, Appearance } from '@busfor/react-native-navigation-appearance'
+
+const App = () => {
+  const { setManualAppearance, setUseSystemAppearance } = useThemeControls()
+
+  return (
+    <>
+      <Button
+        title='Dark'
+        onPress={() => {
+          setManualAppearance(Appearance.dark)
+          setUseSystemAppearance(false)
+        }}
+      />
+      <Button
+        title='Light'
+        onPress={() => {
+          setManualAppearance(Appearance.dark)
+          setUseSystemAppearance(false)
+        }}
+      />
+      <Button
+        title='System'
+        onPress={() => {
+          setUseSystemAppearance(true)
+        }}
+      />
+    </>
+  )
+}
+```
+
+## Other hooks
+
+### useThemeAppearance
+
+You can get current appearance using `useThemeAppearance` hook:
+
+```javascript
+import { useThemeAppearance, Appearance } from '@busfor/react-native-navigation-appearance'
+
+const App = () => {
+  const appearance = useThemeAppearance()
+
+  return <Text>Current appearance: {appearance}</Text>
+}
+```
+
+### useThemedValue
+
+You can get any value for current appearance using `useThemedValue` hook:
+
+```javascript
+import { useThemedValue } from '@busfor/react-native-navigation-appearance'
+
+const lightLogoSource = require('./lightLogo.png')
+const darkLogoSource = require('./darkLogo.png')
+
+const App = () => {
+  const logoSource = useThemedValue({ light: lightLogoSource, dark: darkLogoSource })
+
+  return <Image source={logoSource} />
+}
+```
