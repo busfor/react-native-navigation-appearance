@@ -41,7 +41,8 @@ export const getCurrentAppearance = (): Appearance => {
 export const initAppearanceModule = async (defaultOptions: DefaultOptions, defaultState?: AppearanceState) => {
   try {
     const state = await storage.getState()
-    const newState = state === null ? defaultState || currentAppearanceState : (JSON.parse(state) as AppearanceState)
+    const newState =
+      state === null ? { ...currentAppearanceState, ...defaultState } : (JSON.parse(state) as AppearanceState)
     currentAppearanceState = newState
     updateNativeAppearance(newState)
     Navigation.setDefaultOptions(defaultOptions({ appearance: getCurrentAppearance() }))

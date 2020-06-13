@@ -6,6 +6,12 @@ export enum Appearance {
   dark = 'dark',
 }
 
+export enum AppearanceMode {
+  light = 'light',
+  dark = 'dark',
+  system = 'system',
+}
+
 export interface AppearanceState {
   useSystemAppearance: boolean
   manualAppearance: Appearance

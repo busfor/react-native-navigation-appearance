@@ -245,33 +245,17 @@ Also you can open the example project to see how it works in the real case.
 You can set appearance manually using `useThemeControls` hook:
 
 ```javascript
-import { useThemeControls, Appearance } from '@busfor/react-native-navigation-appearance'
+import { useThemeControls, AppearanceMode } from '@busfor/react-native-navigation-appearance'
 
 const App = () => {
-  const { setManualAppearance, setUseSystemAppearance } = useThemeControls()
+  const { currentApearanceMode, setAppearanceMode } = useThemeControls()
 
   return (
     <>
-      <Button
-        title='Dark'
-        onPress={() => {
-          setManualAppearance(Appearance.dark)
-          setUseSystemAppearance(false)
-        }}
-      />
-      <Button
-        title='Light'
-        onPress={() => {
-          setManualAppearance(Appearance.dark)
-          setUseSystemAppearance(false)
-        }}
-      />
-      <Button
-        title='System'
-        onPress={() => {
-          setUseSystemAppearance(true)
-        }}
-      />
+      <Text>Current mode: {currentApearanceMode}</Text>
+      <Button title='Dark' onPress={() => setAppearanceMode(AppearanceMode.dark)} />
+      <Button title='Light' onPress={() => setAppearanceMode(AppearanceMode.light)} />
+      <Button title='System' onPress={() => setAppearanceMode(AppearanceMode.system)} />
     </>
   )
 }
