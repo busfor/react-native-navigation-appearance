@@ -33,7 +33,7 @@ export const createDefaultOptions = (defaults: (props: StylesProps) => Options):
     defaultOptions.statusBar = undefined
   }
 
-  if (options?.topBar?.backButton === undefined) {
+  if (options?.topBar?.backButton === null) {
     defaultOptions.topBar.backButton = undefined
   }
 
