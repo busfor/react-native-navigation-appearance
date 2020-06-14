@@ -1,6 +1,6 @@
 example
 scripts
-src
+./src
 .prettierrc
 tsconfig.json
 .vscode
