@@ -4,8 +4,6 @@
 [![npm (tag)](https://img.shields.io/npm/v/@busfor/react-native-navigation-appearance/latest?style=for-the-badge)](https://www.npmjs.com/package/@busfor/react-native-navigation-appearance)
 ![](https://img.shields.io/npm/types/typescript?style=for-the-badge)
 
-React Native universal Touchable component.
-
 <div>
 <img width="280px" src="example.gif" />
 <img width="280px" src="realcase.gif" />
