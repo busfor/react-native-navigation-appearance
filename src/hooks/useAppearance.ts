@@ -2,6 +2,7 @@ import { useMemo, useContext } from 'react'
 
 import { Appearance } from '../types'
 import { ThemeContext } from '../Context'
+import { isDarkModeMock } from '../mock'
 
 import useDeviceAppearance from './useDeviceAppearance'
 
@@ -11,11 +12,12 @@ const useAppearance = (): Appearance => {
     state: { useSystemAppearance, manualAppearance },
   } = useContext(ThemeContext)
 
-  const appearance = useMemo(() => (useSystemAppearance ? deviceAppearance : manualAppearance), [
-    useSystemAppearance,
-    deviceAppearance,
-    manualAppearance,
-  ])
+  const appearance = useMemo(() => {
+    if (isDarkModeMock) {
+      return Appearance.dark
+    }
+    return useSystemAppearance ? deviceAppearance : manualAppearance
+  }, [useSystemAppearance, deviceAppearance, manualAppearance])
 
   return appearance
 }
