@@ -315,3 +315,34 @@ export default createOptions((props) =>
   })
 )
 ```
+
+## Jest integration
+
+1. Update your Jest setup file:
+
+```javascript
+import mockAsyncStorage from '@react-native-community/async-storage/jest/async-storage-mock'
+import '@busfor/react-native-navigation-appearance/jest/rnn-appearance-mock'
+
+jest.mock('@react-native-community/async-storage', () => mockAsyncStorage)
+jest.useFakeTimers()
+```
+
+2. Use `setDarkModeMock` in your test cases:
+
+```javascript
+import { setDarkModeMock } from '@busfor/react-native-navigation-appearance'
+
+describe('Theming', () => {
+  afterEach(() => {
+    setDarkModeMock(false)
+  })
+  it(`dark theme`, () => {
+    setDarkModeMock(true)
+    ...
+  })s
+  it(`light theme`, () => {
+    ...
+  })
+})
+```

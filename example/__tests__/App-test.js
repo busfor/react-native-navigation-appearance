@@ -1,10 +1,18 @@
 import 'react-native'
 import React from 'react'
-import App from '../App'
+import { setDarkModeMock } from '@busfor/react-native-navigation-appearance'
+import AppScreen from '../src/AppScreen'
 
 import renderer from 'react-test-renderer'
 
-it('renders correctly', () => {
-  const tree = renderer.create(<App />).toJSON()
+it('light theme', () => {
+  setDarkModeMock(false)
+  const tree = renderer.create(<AppScreen />).toJSON()
+  expect(tree).toMatchSnapshot()
+})
+
+it('dark theme', () => {
+  setDarkModeMock(true)
+  const tree = renderer.create(<AppScreen />).toJSON()
   expect(tree).toMatchSnapshot()
 })
