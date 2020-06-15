@@ -4,6 +4,7 @@ import { Platform } from 'react-native'
 
 import { ThemedOptions } from '../types'
 import { darkAppearanceXiaomiException } from '../utils'
+import { useAppearanceCustomHook } from '../Context'
 
 import useAppearance from './useAppearance'
 
@@ -18,6 +19,8 @@ const useThemedOptions = <T>(passProps: T, optionsCreator: ThemedOptions<T>, com
   const appearance = useAppearance()
   const firstUpdate = useRef(true)
 
+  const customHookValue = useAppearanceCustomHook()
+
   useEffect(() => {
     if (firstUpdate.current) {
       firstUpdate.current = false
@@ -31,7 +34,7 @@ const useThemedOptions = <T>(passProps: T, optionsCreator: ThemedOptions<T>, com
     if (Platform.OS === 'android' && bottomTabs) {
       Navigation.mergeOptions(componentId, { bottomTabs })
     }
-  }, [appearance])
+  }, [appearance, customHookValue])
 }
 
 export default useThemedOptions

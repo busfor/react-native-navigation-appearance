@@ -1,6 +1,7 @@
 import { useMemo } from 'react'
 
 import { NamedStyles, Appearance } from '../types'
+import { useAppearanceCustomHook } from '../Context'
 
 import useThemedValue from './useThemedValue'
 
@@ -11,7 +12,11 @@ import useThemedValue from './useThemedValue'
  */
 const useStyles = <T extends NamedStyles<T>>(createdStyles: { [s in Appearance]: T }): T => {
   const themedStyles = useThemedValue(createdStyles)
-  const styles = useMemo(() => themedStyles, [themedStyles])
+
+  const customHookValue = useAppearanceCustomHook()
+
+  const styles = useMemo(() => themedStyles, [themedStyles, customHookValue])
+
   return styles
 }
 

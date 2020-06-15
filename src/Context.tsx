@@ -30,6 +30,8 @@ export let currentAppearanceState: AppearanceState = {
   manualAppearance: initialAppearance,
 }
 
+export let useAppearanceCustomHook = () => {}
+
 export const getCurrentAppearance = (): Appearance => {
   const { useSystemAppearance, manualAppearance } = currentAppearanceState
   if (!useSystemAppearance) {
@@ -38,12 +40,19 @@ export const getCurrentAppearance = (): Appearance => {
   return RNAppearance.getColorScheme() as Appearance
 }
 
-export const initAppearanceModule = async (defaultOptions: DefaultOptions, defaultState?: AppearanceState) => {
+export const initAppearanceModule = async (
+  defaultOptions: DefaultOptions,
+  defaultState?: AppearanceState,
+  hook?: () => void
+) => {
   try {
     const state = await storage.getState()
     const newState =
       state === null ? { ...currentAppearanceState, ...defaultState } : (JSON.parse(state) as AppearanceState)
     currentAppearanceState = newState
+    if (hook) {
+      useAppearanceCustomHook = hook
+    }
     updateNativeAppearance(newState)
     Navigation.setDefaultOptions(defaultOptions({ appearance: getCurrentAppearance() }))
   } catch {}
