@@ -28,9 +28,9 @@ const AppScreen = memo(({ componentId }) => {
       <Text style={styles.text}>Choose mode:</Text>
       <View style={styles.buttons}>
         <View style={styles.button}>
-          <Button title='system' onPress={() => setAppearanceMode(AppearanceMode.system)} />
-        </View>
-        <View style={styles.button}>
+          <View style={styles.button}>
+            <Button title='system' onPress={() => setAppearanceMode(AppearanceMode.system)} />
+          </View>
           <Button title='light' onPress={() => setAppearanceMode(AppearanceMode.light)} />
         </View>
         <View style={styles.button}>
