@@ -16,8 +16,11 @@ import java.util.*
 
 var themeResId: Int? = null
 
+var onChangeCallback: ((mode: String) -> Void)? = null
+
 class RNNAppearanceModule(private val reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(reactContext), LifecycleEventListener {
     private var lastEmittedMode: Int
+    private var useSystemAppearance: Boolean
 
     private inner class Receiver(private val module: RNNAppearanceModule) : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
@@ -29,6 +32,10 @@ class RNNAppearanceModule(private val reactContext: ReactApplicationContext) : R
         themeResId?.let { currentActivity!!.setTheme(it) }
     }
 
+    private fun emitCallback(appearance: String) {
+        onChangeCallback?.let { it(appearance) }
+    }
+
     private fun notifyForChange() {
         if (reactContext.hasActiveCatalystInstance()) {
             val currentMode = reactContext.resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
@@ -36,6 +43,9 @@ class RNNAppearanceModule(private val reactContext: ReactApplicationContext) : R
             lastEmittedMode = currentMode
             val mode = if (currentMode == Configuration.UI_MODE_NIGHT_YES) "dark" else "light"
             updateTheme()
+            if (useSystemAppearance) {
+                emitCallback(mode)
+            }
             reactContext.getJSModule(RCTDeviceEventEmitter::class.java)
                     .emit("currentModeChanged", mode)
         }
@@ -46,6 +56,16 @@ class RNNAppearanceModule(private val reactContext: ReactApplicationContext) : R
     fun setDefaultNightMode(mode: Int) {
         currentActivity?.runOnUiThread {
             AppCompatDelegate.setDefaultNightMode(mode)
+            useSystemAppearance = mode == AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM
+            when (mode) {
+                AppCompatDelegate.MODE_NIGHT_YES -> emitCallback("dark")
+                AppCompatDelegate.MODE_NIGHT_NO -> emitCallback("light")
+                AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM -> {
+                    val currentSystemMode = reactContext.resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
+                    val systemAppearance = if (currentSystemMode == Configuration.UI_MODE_NIGHT_YES) "dark" else "light"
+                    emitCallback(systemAppearance)
+                }
+            }
             updateTheme()
         }
     }
@@ -73,6 +93,7 @@ class RNNAppearanceModule(private val reactContext: ReactApplicationContext) : R
 
     init {
         lastEmittedMode = reactContext.resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
+        useSystemAppearance = false
         reactContext.addLifecycleEventListener(this)
         reactContext.registerReceiver(Receiver(this), IntentFilter("android.intent.action.CONFIGURATION_CHANGED"))
     }
